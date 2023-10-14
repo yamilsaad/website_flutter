@@ -11,13 +11,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFEEEEEE),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: MediaQuery(
-          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-          //height: MediaQuery.of(context).size.height - kToolbarHeight,
-          child: PrincipalPage(),
-        ),
+      body: MediaQuery(
+        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+        //height: MediaQuery.of(context).size.height - kToolbarHeight,
+        child: PrincipalPage(),
       ),
       bottomSheet: PopupMenuButton(
           surfaceTintColor: Color(0xFF053B50),

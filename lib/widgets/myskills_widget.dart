@@ -56,11 +56,11 @@ class MyskillsWidget extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 5.w),
+                    SizedBox(width: 4.w),
                     Icon(
-                      Icons.favorite_outlined,
+                      Icons.emoji_objects_outlined,
                       color: Colors.white,
-                      size: 8.dg,
+                      size: 9.dg,
                     )
                   ],
                 ),
@@ -77,16 +77,11 @@ class MyskillsWidget extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.bottomLeft,
                 end: Alignment.bottomRight,
-                colors: [
-                  Colors.blueGrey,
-                  const Color.fromARGB(255, 71, 81, 88)
-                ],
-                stops: [
-                  0.0,
-                  1.0
-                ]),
+                colors: [Colors.blueGrey, Colors.black26],
+                stops: [0.0, 1.0]),
             borderRadius: BorderRadius.circular(10)),
         child: SingleChildScrollView(
+          clipBehavior: Clip.antiAlias,
           scrollDirection: Axis.vertical,
           child: ClipRRect(
             child: Column(
@@ -129,7 +124,7 @@ class MyskillsWidget extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Flutter es una tecnología extraordinara. Su cualidad multiplataforma te permite crear hermosos proyectos, desde una espectacular App Móvil, hasta una pagina Web como la questás viendo! Creemos juntos algo maravilloso!',
+                          'Dart (originalmente llamado Dash) es un lenguaje de programación de código abierto, desarrollado por Google. ',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -215,7 +210,7 @@ class MyskillsWidget extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Flutter es una tecnología extraordinara. Su cualidad multiplataforma te permite crear hermosos proyectos, desde una espectacular App Móvil, hasta una pagina Web como la questás viendo! Creemos juntos algo maravilloso!',
+                          'Firebase es una plataforma adquirida por Google ubicada en la nube, integrada con Google Cloud Platform, que usa un conjunto de herramientas para la creación y sincronización de proyectos que serán dotados de alta calidad, haciendo posible el crecimiento del número de usuarios y dando resultado también a la obtención de una mayor monetización.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -267,7 +262,7 @@ class MyskillsWidget extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Flutter es una tecnología extraordinara. Su cualidad multiplataforma te permite crear hermosos proyectos, desde una espectacular App Móvil, hasta una pagina Web como la questás viendo! Creemos juntos algo maravilloso!',
+                          'Un manejador de estado cubit es un tipo de manejador de estado que se utiliza para administrar el estado de una aplicación Flutter. Los cubits son una versión simplificada de los blocs, que ofrecen una forma más fácil de administrar el estado de una aplicación.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -322,7 +317,7 @@ class MyskillsWidget extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Flutter es una tecnología extraordinara. Su cualidad multiplataforma te permite crear hermosos proyectos, desde una espectacular App Móvil, hasta una pagina Web como la questás viendo! Creemos juntos algo maravilloso!',
+                          'Flame es un motor de juego modular de Flutter que proporciona un conjunto completo de soluciones apartadas para juegos. Aprovecha la poderosa infraestructura proporcionada por Flutter pero simplifica el código que necesitas para construir tus proyectos.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,

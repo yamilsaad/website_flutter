@@ -53,10 +53,10 @@ class SoydevWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  'Soy.Tech',
+                  'SCRUM',
                   style: GoogleFonts.roboto(
                       fontSize: 15.sp,
-                      color: Colors.yellow.shade100,
+                      color: Colors.blueGrey.shade100,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -69,7 +69,7 @@ class SoydevWidget extends StatelessWidget {
                       'Web',
                       style: GoogleFonts.roboto(
                           fontSize: 33.sp,
-                          color: Colors.yellow.shade100,
+                          color: Colors.orange.shade100,
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20.w),
@@ -77,7 +77,7 @@ class SoydevWidget extends StatelessWidget {
                       'Soy.Team',
                       style: GoogleFonts.roboto(
                           fontSize: 15.sp,
-                          color: Colors.yellow.shade100,
+                          color: Colors.green.shade100,
                           fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -90,10 +90,10 @@ class SoydevWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  'Soy.Tech',
+                  'Mobile',
                   style: GoogleFonts.roboto(
-                      fontSize: 5.sp,
-                      color: Colors.indigo.shade100,
+                      fontSize: 8.sp,
+                      color: Colors.orange.shade100,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -106,12 +106,41 @@ class SoydevWidget extends StatelessWidget {
                       'Firebase',
                       style: GoogleFonts.roboto(
                           fontSize: 10.sp,
-                          color: Colors.indigo.shade100,
+                          color: Colors.blueGrey.shade100,
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 45.w),
                     Text(
                       'Soy.Team',
+                      style: GoogleFonts.roboto(
+                          fontSize: 8.sp,
+                          color: Colors.pink.shade100,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            //******************************** */
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 240.h,
+                ),
+                Row(
+                  children: [
+                    SizedBox(width: 10.w),
+                    Text(
+                      'SCRUM Metology',
+                      style: GoogleFonts.roboto(
+                          fontSize: 10.sp,
+                          color: Colors.indigo.shade100,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(width: 45.w),
+                    Text(
+                      'UX / UI',
                       style: GoogleFonts.roboto(
                           fontSize: 8.sp,
                           color: Colors.indigo.shade100,
@@ -120,7 +149,7 @@ class SoydevWidget extends StatelessWidget {
                   ],
                 ),
               ],
-            )
+            ),
           ],
         ),
         /*FlipCard(

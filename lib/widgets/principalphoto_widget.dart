@@ -17,10 +17,8 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget> {
   Widget build(BuildContext context) {
     const colorizeColors = [
       Colors.white,
-      Color.fromARGB(255, 245, 136, 173),
-      Color.fromARGB(255, 244, 67, 126),
-      Colors.pink,
-      Color.fromARGB(255, 211, 99, 231),
+      Color.fromARGB(255, 238, 141, 173),
+      Color.fromARGB(255, 237, 101, 92),
       Colors.purple,
       Colors.blue,
       Colors.yellow,
@@ -50,6 +48,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget> {
                 child: SizedBox(
                   width: 130.w,
                   child: AnimatedTextKit(
+                    pause: Duration(milliseconds: 3000),
                     animatedTexts: [
                       ColorizeAnimatedText(
                         'Welcome',
