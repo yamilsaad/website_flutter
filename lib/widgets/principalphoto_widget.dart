@@ -19,7 +19,8 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 1500),
+      duration: const Duration(milliseconds: 1200),
+      animationBehavior: AnimationBehavior.normal,
       vsync: this,
     );
 
@@ -59,7 +60,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
                     decoration: BoxDecoration(),
                     child: ClipRRect(
                       child: Image.asset(
-                        'assets/img/foto_mia.png',
+                        'assets/img/fotomia_reducida.png',
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -70,7 +70,7 @@ class ButtonAboutme extends StatelessWidget {
                                 scrollDirection: Axis.vertical,
                                 child: Center(
                                     child: Text(
-                                  'Combinar el arte con la tecnología es algo que me apsiona. Como dijera Leonardo Davinci: El Arte y la Tecnología pueden ir de la mano❤️🎨. Mi inspiración viene de la observación. Me considero una persona observadora, muy pragmática y detallista. Aprecio la naturaleza y me deleito en los resultados de las grandes obras de arte tecnológicas. Con Flutter he podido encontrar esta conjuncion 😊 😊 😊 ',
+                                  'Combining art with technology is something that excites me. As Leonardo da Vinci said: Art and science can walk hand in hand❤️🎨. My inspiration comes from observation. I consider myself an observant person, very pragmatic and detail-oriented. I appreciate nature and delight in the results of great technological works of art. With Flutter I was able to find this conjunction 😊 😊 😊 ',
                                   style: GoogleFonts.robotoCondensed(
                                       color: Colors.white, fontSize: 5.sp),
                                 )),

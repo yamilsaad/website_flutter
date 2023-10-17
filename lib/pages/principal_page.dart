@@ -15,7 +15,7 @@ class PrincipalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      PhotoPrincipalWidget(),
+      const PhotoPrincipalWidget(),
       SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -35,12 +35,12 @@ class PrincipalPage extends StatelessWidget {
                           direction: FlipDirection.VERTICAL,
                           side: CardSide.FRONT,
                           front: Container(
-                            margin: EdgeInsets.only(top: 0).dg,
+                            margin: const EdgeInsets.only(top: 0).dg,
                             height: 100.h,
                             width: 70.w,
                             constraints: BoxConstraints(maxHeight: 40.dg),
                             decoration: BoxDecoration(
-                                color: Color(0xFF053B50),
+                                color: const Color(0xFF053B50),
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(0.5).dg,
@@ -56,12 +56,12 @@ class PrincipalPage extends StatelessWidget {
                             ),
                           ),
                           back: Container(
-                            margin: EdgeInsets.only(top: 0).dg,
+                            margin: const EdgeInsets.only(top: 0).dg,
                             height: 100.h,
                             width: 70.w,
                             constraints: BoxConstraints(maxHeight: 35.dg),
                             decoration: BoxDecoration(
-                                color: Color(0xFF053B50),
+                                color: const Color(0xFF053B50),
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(0.5).dg,
@@ -183,11 +183,11 @@ class PrincipalPage extends StatelessWidget {
                       width: 10.w,
                     ),
                     Stack(children: [
-                      SoydevWidget(),
+                      const SoydevWidget(),
                       Container(
                           width: 170.w,
                           height: 400.h,
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               //TarjetaTresdeWidget(),
@@ -200,7 +200,7 @@ class PrincipalPage extends StatelessWidget {
                   ],
                 ),
               ),
-              ButtonsComponent(),
+              const ButtonsComponent(),
             ],
           ),
           Row(
@@ -208,7 +208,7 @@ class PrincipalPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 5, left: 40).dg,
-                child: Stack(
+                child: const Stack(
                   children: [
                     MyskillsWidget(),
                   ],

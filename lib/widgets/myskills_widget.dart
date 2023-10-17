@@ -118,13 +118,13 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 18.w,
                     ),
-                    Container(
+                    SizedBox(
                       width: 60.w,
                       height: 80.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Dart (originalmente llamado Dash) es un lenguaje de programación de código abierto, desarrollado por Google. ',
+                          'Dart (originally called Dash) is an open source programming language, developed by Google.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -141,7 +141,7 @@ class MyskillsWidget extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 30.dg,
                       width: 40.w,
                       child: ClipRRect(
@@ -161,13 +161,13 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 15.w,
                     ),
-                    Container(
+                    SizedBox(
                       width: 60.w,
                       height: 80.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Flutter es una tecnología extraordinara. Su cualidad multiplataforma te permite crear hermosos proyectos, desde una espectacular App Móvil, hasta una pagina Web como la questás viendo! Creemos juntos algo maravilloso!',
+                          "Flutter is an extraordinary technology. Its multiplatform quality allows you to create beautiful projects, from a spectacular Mobile App to a Web page like the one you are seeing! Let's create something wonderful together!",
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -184,7 +184,7 @@ class MyskillsWidget extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 30.dg,
                       width: 40.w,
                       child: ClipRRect(
@@ -204,13 +204,13 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 7.w,
                     ),
-                    Container(
+                    SizedBox(
                       width: 60.w,
                       height: 80.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Firebase es una plataforma adquirida por Google ubicada en la nube, integrada con Google Cloud Platform, que usa un conjunto de herramientas para la creación y sincronización de proyectos que serán dotados de alta calidad, haciendo posible el crecimiento del número de usuarios y dando resultado también a la obtención de una mayor monetización.',
+                          'Firebase is a platform acquired by Google located in the cloud, integrated with Google Cloud Platform, which uses a set of tools for the creation and synchronization of projects that will be provided with high quality, making possible the growth of the number of users and also giving results. to obtain greater monetization.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -262,7 +262,7 @@ class MyskillsWidget extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Un manejador de estado cubit es un tipo de manejador de estado que se utiliza para administrar el estado de una aplicación Flutter. Los cubits son una versión simplificada de los blocs, que ofrecen una forma más fácil de administrar el estado de una aplicación.',
+                          'A cubit state handler is a type of state handler used to manage the state of a Flutter application. Cubits are a simplified version of pads, offering an easier way to manage the state of an application.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -317,7 +317,7 @@ class MyskillsWidget extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Text(
-                          'Flame es un motor de juego modular de Flutter que proporciona un conjunto completo de soluciones apartadas para juegos. Aprovecha la poderosa infraestructura proporcionada por Flutter pero simplifica el código que necesitas para construir tus proyectos.',
+                          'Flame is a modular Flutter game engine that provides a complete set of out-of-the-box solutions for gaming. Take advantage of the powerful infrastructure provided by Flutter but simplify the code you need to build your projects.',
                           style: GoogleFonts.robotoCondensed(
                             color: Colors.white,
                             fontSize: 4.sp,

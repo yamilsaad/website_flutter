@@ -115,7 +115,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          //TODO: Cambiar por whatsapp!
           PopupMenuItem(
             child: ListTile(
               hoverColor: const Color(0xFF053B50),
