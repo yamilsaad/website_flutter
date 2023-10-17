@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -5,8 +7,27 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'pages.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Activa el temporizador para mostrar la imagen de carga durante 2 segundos
+    Timer(Duration(seconds: 3), () {
+      setState(() {
+        _isLoading = false; // Oculta la imagen de carga después de 2 segundos
+      });
+    });
+  }
 
   Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
@@ -16,14 +37,36 @@ class HomePage extends StatelessWidget {
     }
   }
 
+  void enviarCorreo() async {
+    final Uri params = Uri(
+      scheme: 'mailto',
+      path: 'yamilsaad00@gmail.com',
+      query: 'subject=Reporta&body=Detalhe aqui qual bug voce encontrou: ',
+    );
+    String url = params.toString();
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      debugPrint('Could not launch $url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFEEEEEE),
-      body: MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-        child: const PrincipalPage(),
-      ),
+      body: _isLoading
+          ? Center(
+              child: Image.asset(
+                'assets/img/loading.gif',
+                width: 200.w,
+                height: 200.h,
+              ),
+            )
+          : MediaQuery(
+              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+              child: const PrincipalPage(),
+            ),
       bottomSheet: PopupMenuButton(
         surfaceTintColor: const Color(0xFF053B50),
         shadowColor: const Color(0xFF053B50),
@@ -54,6 +97,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           PopupMenuItem(
+            value: 'LinkedIn',
             child: ListTile(
               hoverColor: const Color(0xFF053B50),
               onLongPress: () {},
@@ -70,13 +114,15 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            value: 'LinkedIn',
           ),
           //TODO: Cambiar por whatsapp!
           PopupMenuItem(
             child: ListTile(
               hoverColor: const Color(0xFF053B50),
               onLongPress: () {},
+              onTap: () {
+                enviarCorreo();
+              },
               leading: Image.asset('assets/img/gmail_icon.png'),
               title: Text(
                 'Gmail',
