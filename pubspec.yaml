@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^6.1.0
   provider: ^6.0.5
   routemaster: ^1.0.1
+  url_launcher: ^6.1.14
 
 dev_dependencies:
   flutter_lints: ^2.0.0
