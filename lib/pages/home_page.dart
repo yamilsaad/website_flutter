@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:website_flutter/responsivos/responsivo.dart';
+import 'package:website_flutter/responsivos/responsivo_layout.dart';
 
 import 'pages.dart';
 
@@ -65,7 +67,11 @@ class _HomePageState extends State<HomePage> {
             )
           : MediaQuery(
               data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-              child: const PrincipalPage(),
+              child: ResponsiveLayout(
+                desktopScaffold: const PrincipalPage(),
+                mobileScaffold: ResponsiveMobile(),
+                tabletScaffold: ResponsiveTablet(),
+              ),
             ),
       bottomSheet: PopupMenuButton(
         surfaceTintColor: const Color(0xFF053B50),
@@ -90,7 +96,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(
                 'GitHub',
                 style: GoogleFonts.roboto(
-                  fontSize: 8.sp,
+                  fontSize: 18,
                   color: Colors.grey.shade400,
                 ),
               ),
@@ -109,7 +115,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(
                 'LinkedIn',
                 style: GoogleFonts.roboto(
-                  fontSize: 8.sp,
+                  fontSize: 18,
                   color: Colors.grey.shade400,
                 ),
               ),
@@ -126,7 +132,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(
                 'Gmail',
                 style: GoogleFonts.roboto(
-                  fontSize: 8.sp,
+                  fontSize: 18,
                   color: Colors.grey.shade400,
                 ),
               ),

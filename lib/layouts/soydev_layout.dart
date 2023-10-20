@@ -11,7 +11,7 @@ class SoydevWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: 180.w,
-        height: 420.h,
+        height: 480.h,
         //color: Colors.amber,
         child: FlipCard(
           fill: Fill.fillFront,

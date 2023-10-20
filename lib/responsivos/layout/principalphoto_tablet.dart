@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PhotoPrincipalWidget extends StatefulWidget {
-  const PhotoPrincipalWidget({Key? key}) : super(key: key);
+class PhotoPrincipalTablet extends StatefulWidget {
+  const PhotoPrincipalTablet({Key? key}) : super(key: key);
 
   @override
-  State<PhotoPrincipalWidget> createState() => _PhotoPrincipalWidgetState();
+  State<PhotoPrincipalTablet> createState() => _PhotoPrincipalWidgetState();
 }
 
-class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
+class _PhotoPrincipalWidgetState extends State<PhotoPrincipalTablet>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
@@ -19,7 +19,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 2000),
       animationBehavior: AnimationBehavior.normal,
       vsync: this,
     );
@@ -34,12 +34,10 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
 
   @override
   Widget build(BuildContext context) {
-    const colorizeColors = [
+    const _colorizeColors = [
       Colors.white,
       Color.fromARGB(255, 238, 141, 173),
       Color.fromARGB(255, 237, 101, 92),
-      Colors.purple,
-      Colors.blue,
       Colors.yellow,
       Colors.red,
     ];
@@ -48,15 +46,15 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
       animation: _controller,
       builder: (context, child) {
         return Transform.translate(
-          offset: Offset(600 * _animation.value, 0),
+          offset: Offset(480 * _animation.value, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Stack(
                 children: [
                   Container(
-                    height: 900,
-                    width: 600,
+                    height: 820,
+                    width: 480,
                     decoration: BoxDecoration(),
                     child: ClipRRect(
                       child: Image.asset(
@@ -71,30 +69,27 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: SizedBox(
-                          width: 130.w,
+                          width: 130,
                           child: AnimatedTextKit(
                             pause: Duration(milliseconds: 3000),
                             animatedTexts: [
                               ColorizeAnimatedText(
                                 'Welcome',
                                 textStyle: GoogleFonts.roboto(
-                                    fontSize: 5.sp,
-                                    fontWeight: FontWeight.bold),
-                                colors: colorizeColors,
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                colors: _colorizeColors,
                               ),
                               ColorizeAnimatedText(
                                 'Soy.Dev',
                                 textStyle: GoogleFonts.roboto(
-                                    fontSize: 5.sp,
-                                    fontWeight: FontWeight.bold),
-                                colors: colorizeColors,
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                colors: _colorizeColors,
                               ),
                               ColorizeAnimatedText(
                                 'Minimalist',
                                 textStyle: GoogleFonts.roboto(
-                                    fontSize: 5.sp,
-                                    fontWeight: FontWeight.bold),
-                                colors: colorizeColors,
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                colors: _colorizeColors,
                               ),
                             ],
                             isRepeatingAnimation: false,
