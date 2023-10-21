@@ -2,18 +2,17 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:website_flutter/pages/pages.dart';
 
 class SoydevWidget extends StatelessWidget {
   const SoydevWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         width: 180.w,
         height: 480.h,
         //color: Colors.amber,
-        child: FlipCard(
+        child: const FlipCard(
           fill: Fill.fillFront,
           side: CardSide.FRONT,
           direction: FlipDirection.HORIZONTAL,

@@ -10,14 +10,16 @@ class ResponsiveMobile extends StatelessWidget {
   const ResponsiveMobile({
     super.key,
   });
-  //TODO: Corregir esponsive mobile
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 1000,
+    final currentWithMobile = MediaQuery.of(context).size.width;
+    final currentHeithMobile = MediaQuery.of(context).size.height;
+    return SizedBox(
+      height: currentHeithMobile,
+      width: currentWithMobile,
       child: Stack(children: [
-        Container(
-          height: 1000,
+        SizedBox(
+          height: currentHeithMobile,
           child: Image.asset(
             'assets/img/soyDevchica.png',
             fit: BoxFit.cover,
@@ -36,17 +38,17 @@ class ResponsiveMobile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(
-                        height: 40,
+                        height: 40.h,
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5).dg,
                         child: FlipCard(
                           fill: Fill.fillFront,
                           direction: FlipDirection.VERTICAL,
                           side: CardSide.FRONT,
                           front: Container(
-                            height: 80,
-                            width: 160,
+                            height: 90.h,
+                            width: 160.w,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10)),
@@ -56,7 +58,7 @@ class ResponsiveMobile extends StatelessWidget {
                                 child: Text(
                                   'Soy.Dev',
                                   style: GoogleFonts.roboto(
-                                      fontSize: 35,
+                                      fontSize: 35.sp,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xFF053B50)),
                                 ),
@@ -65,8 +67,8 @@ class ResponsiveMobile extends StatelessWidget {
                           ),
                           back: Container(
                             margin: const EdgeInsets.only(top: 0),
-                            height: 80,
-                            width: 160,
+                            height: 90.h,
+                            width: 160.w,
                             decoration: BoxDecoration(
                                 color: Colors.black26,
                                 borderRadius: BorderRadius.circular(10)),
@@ -78,21 +80,21 @@ class ResponsiveMobile extends StatelessWidget {
                                     child: Text(
                                       'Soy.Dev ❤️',
                                       style: GoogleFonts.roboto(
-                                          fontSize: 14,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.red),
                                     ),
                                   ),
                                   Divider(
-                                    height: 2,
+                                    height: 1.h,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(1.0),
+                                    padding: const EdgeInsets.all(1.0).dg,
                                     child: Center(
                                       child: Text(
                                         '<Progr@mador> /Des@rrollador de Software/ #Diseñador# 🎨📱❤️',
                                         style: GoogleFonts.roboto(
-                                            fontSize: 12,
+                                            fontSize: 10.sp,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -105,14 +107,14 @@ class ResponsiveMobile extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 40,
+                        height: 40.h,
                       ),
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [MyskillsResponsive()],
+                        children: [MyskillsResponsiveMobile()],
                       ),
                       SizedBox(
-                        height: 100,
+                        height: 160.h,
                       ),
                       const ButtonsComponentMobile(),
                     ],

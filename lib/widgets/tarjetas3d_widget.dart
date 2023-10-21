@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../layouts/layout.dart';
-
 class TarjetaTresdeWidget extends StatelessWidget {
   const TarjetaTresdeWidget({super.key});
 
@@ -66,18 +64,14 @@ class TarjetaTresdeWidget extends StatelessWidget {
                     perspectiveFactor: 0.002,
                     layersGap: 30,
                     transitionDuration: const Duration(milliseconds: 400),
-                    onChange: (int pageIndex) {
-                      print(pageIndex);
-                    },
-                    onTap: () {
-                      print("taped");
-                    },
+                    onChange: (int pageIndex) {},
+                    onTap: () {},
                   ),
                 ),
                 SizedBox(
                   width: 5.w,
                 ),
-                Container(
+                SizedBox(
                   //color: Colors.red,
                   width: 80.w,
                   height: 320.h,

@@ -28,7 +28,7 @@ class ButtonAboutme extends StatelessWidget {
                 builder: (BuildContext context) {
                   return AlertDialog(
                     backgroundColor: Colors.black54,
-                    surfaceTintColor: Color.fromARGB(255, 25, 115, 179),
+                    surfaceTintColor: const Color.fromARGB(255, 25, 115, 179),
                     //title: Text('About me'),
                     //content: Text('Contenido'),
                     actions: [
@@ -100,7 +100,7 @@ class ButtonAboutme extends StatelessWidget {
               child: Text(
                 'about me',
                 style: TextStyle(
-                  fontSize: 5.sp,
+                  fontSize: 7.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),

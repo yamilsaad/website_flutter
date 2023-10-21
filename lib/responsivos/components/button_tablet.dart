@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ButtonsComponentTablet extends StatelessWidget {
@@ -12,11 +13,11 @@ class ButtonsComponentTablet extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ButtonAboutmeTablet(),
+        const ButtonAboutmeTablet(),
         SizedBox(
-          width: 10,
+          width: 3.w,
         ),
-        ButtonMyexperenceTablet(),
+        const ButtonMyexperenceTablet(),
       ],
     );
   }
@@ -29,99 +30,100 @@ class ButtonAboutmeTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      child: Container(
-        height: 50,
-        width: 200,
-        decoration: BoxDecoration(
-          color: Colors.white10,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: TextButton(
-          onPressed: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  backgroundColor: Colors.black54,
-                  surfaceTintColor: Color.fromARGB(255, 25, 115, 179),
-                  //title: Text('About me'),
-                  //content: Text('Contenido'),
-                  actions: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10.0),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 6.0),
-                            child: Container(
-                              width: 400,
-                              height: 200,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  'assets/img/banneruno.png',
-                                  fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.only(left: 6.0).dg,
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: Container(
+          height: 40.h,
+          width: 50.w,
+          constraints: BoxConstraints(maxHeight: 18.dg),
+          decoration: BoxDecoration(
+            color: Colors.white10,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: TextButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    backgroundColor: Colors.black54,
+                    surfaceTintColor: const Color.fromARGB(255, 25, 115, 179),
+                    //title: Text('About me'),
+                    //content: Text('Contenido'),
+                    actions: [
+                      Padding(
+                        padding: const EdgeInsets.all(2.0).dg,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6.0),
+                              child: Container(
+                                width: 200.w,
+                                height: 150.h,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset(
+                                    'assets/img/banneruno.png',
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Divider(
-                            height: 2,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Container(
-                            width: 400,
-                            height: 300,
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: Center(
-                                  child: Text(
-                                'Combining art with technology is something that excites me. As Leonardo da Vinci said: Art and science can walk hand in hand❤️🎨. My inspiration comes from observation. I consider myself an observant person, very pragmatic and detail-oriented. I appreciate nature and delight in the results of great technological works of art. With Flutter I was able to find this conjunction 😊 😊 😊 ',
-                                style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white, fontSize: 18),
-                              )),
+                            SizedBox(
+                              height: 5.h,
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Center(
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text(
-                          'Ok',
-                          style: GoogleFonts.roboto(
-                              color: Colors.white, fontSize: 20),
+                            Divider(
+                              height: 2.h,
+                            ),
+                            SizedBox(
+                              height: 5.h,
+                            ),
+                            SizedBox(
+                              width: 200.w,
+                              height: 220.h,
+                              //constraints: BoxConstraints(maxHeight: 50.dg),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.vertical,
+                                child: Center(
+                                    child: Text(
+                                  'Combining art with technology is something that excites me. As Leonardo da Vinci said: Art and science can walk hand in hand❤️🎨. My inspiration comes from observation. I consider myself an observant person, very pragmatic and detail-oriented. I appreciate nature and delight in the results of great technological works of art. With Flutter I was able to find this conjunction 😊 😊 😊 ',
+                                  style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white, fontSize: 12.sp),
+                                )),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                  ],
-                );
-              },
-            );
-          },
-          child: Center(
-            child: Text(
-              'about me',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xFF053B50),
+                      Center(
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Text(
+                            'Ok',
+                            style: GoogleFonts.roboto(
+                                color: Colors.white, fontSize: 12.sp),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            child: Center(
+              child: Text(
+                'about me',
+                style: TextStyle(
+                  fontSize: 7.sp,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -139,12 +141,13 @@ class ButtonMyexperenceTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 6.0),
+      padding: const EdgeInsets.only(left: 6.0).dg,
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Container(
-          height: 50,
-          width: 200,
+          height: 40.h,
+          width: 50.w,
+          constraints: BoxConstraints(maxHeight: 18.dg),
           decoration: BoxDecoration(
             color: Colors.white10,
             borderRadius: BorderRadius.circular(15),
@@ -156,19 +159,19 @@ class ButtonMyexperenceTablet extends StatelessWidget {
                 builder: (BuildContext context) {
                   return AlertDialog(
                     backgroundColor: Colors.black54,
-                    surfaceTintColor: Color.fromARGB(255, 25, 115, 179),
+                    surfaceTintColor: const Color.fromARGB(255, 25, 115, 179),
                     //title: Text('About me'),
                     //content: Text('Contenido'),
                     actions: [
                       Padding(
-                        padding: const EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.all(2.0).dg,
                         child: Column(
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 6.0),
                               child: Container(
-                                width: 400,
-                                height: 200,
+                                width: 200.w,
+                                height: 150.h,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -182,17 +185,18 @@ class ButtonMyexperenceTablet extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              height: 5,
+                              height: 5.h,
                             ),
                             Divider(
-                              height: 2,
+                              height: 2.h,
                             ),
                             SizedBox(
-                              height: 5,
+                              height: 5.h,
                             ),
-                            Container(
-                              width: 400,
-                              height: 300,
+                            SizedBox(
+                              width: 200.w,
+                              height: 220.h,
+                              //constraints: BoxConstraints(maxHeight: 50.dg),
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.vertical,
                                 child: Container(
@@ -201,7 +205,7 @@ class ButtonMyexperenceTablet extends StatelessWidget {
                                       child: Text(
                                     'On my path to the technology sector I have acquired not only experience on how to write lines of code, I have volunteered in community services, worked as a salesperson, attended to the whims of men and women in gastronomy, started small businesses, dabbled in philosophy and letters, I learned manual trades related to construction and carpentry, and I acquired the necessary skills to be able to develop in the world of Software, in addition to being a father and husband. All this experience throughout my short life has given me intuition and the ability to empathize with the people around me, and that is my main advantage. Furthermore, I have never lacked the curiosity to continue improving myself. I am everything and nothing at the same time, and that allows me to adapt, work as a team and contribute significantly to any project📱📱📱.',
                                     style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white, fontSize: 18),
+                                        color: Colors.white, fontSize: 12.sp),
                                   )),
                                 ),
                               ),
@@ -217,7 +221,7 @@ class ButtonMyexperenceTablet extends StatelessWidget {
                           child: Text(
                             'Ok',
                             style: GoogleFonts.roboto(
-                                color: Colors.white, fontSize: 20),
+                                color: Colors.white, fontSize: 12.sp),
                           ),
                         ),
                       ),
@@ -228,10 +232,9 @@ class ButtonMyexperenceTablet extends StatelessWidget {
             },
             child: Center(
               child: Text(
-                'my experence',
+                'pathway',
                 style: TextStyle(
-                  fontSize: 25,
-                  color: const Color(0xFF053B50),
+                  fontSize: 7.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),

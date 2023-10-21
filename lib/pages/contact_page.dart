@@ -5,20 +5,16 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Scaffold(
         body: Row(
           children: [
-            Container(
-              child: Text('Contacto'),
-            ),
+            const Text('Contacto'),
             Center(
-              child: Container(
-                child: FloatingActionButton.large(
-                  onPressed: () => Navigator.pushNamed(context, '/home'),
-                  child: Icon(Icons.arrow_circle_up_outlined),
-                ),
+              child: FloatingActionButton.large(
+                onPressed: () => Navigator.pushNamed(context, '/home'),
+                child: const Icon(Icons.arrow_circle_up_outlined),
               ),
             ),
           ],

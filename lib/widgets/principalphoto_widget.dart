@@ -57,7 +57,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
                   Container(
                     height: 900,
                     width: 600,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: ClipRRect(
                       child: Image.asset(
                         'assets/img/fotomia_reducida.png',
@@ -73,7 +73,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
                         child: SizedBox(
                           width: 130.w,
                           child: AnimatedTextKit(
-                            pause: Duration(milliseconds: 3000),
+                            pause: const Duration(milliseconds: 3000),
                             animatedTexts: [
                               ColorizeAnimatedText(
                                 'Welcome',
@@ -99,6 +99,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalWidget>
                             ],
                             isRepeatingAnimation: false,
                             onTap: () {
+                              // ignore: avoid_print
                               print("Tap Event");
                             },
                           ),

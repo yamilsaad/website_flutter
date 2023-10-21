@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           title: 'Web Site',
-          theme:
-              ThemeData(useMaterial3: true, colorSchemeSeed: Color(0xFF053B50)),
+          theme: ThemeData(
+              useMaterial3: true, colorSchemeSeed: const Color(0xFF053B50)),
           routerDelegate:
               RoutemasterDelegate(routesBuilder: (context) => routes),
           routeInformationParser: const RoutemasterParser(),
@@ -34,3 +34,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//TODO: Ver el tema de las rutas y el 404!

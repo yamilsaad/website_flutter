@@ -10,6 +10,7 @@ class MyskillsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     const colorizeColors2 = [
       Color.fromRGBO(255, 255, 255, 1),
       Colors.grey,
@@ -25,17 +26,11 @@ class MyskillsWidget extends StatelessWidget {
         width: 125.w,
         constraints: BoxConstraints(maxHeight: 18.dg),
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.bottomLeft,
                 end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFF053B50),
-                  const Color.fromARGB(255, 71, 81, 88)
-                ],
-                stops: [
-                  0.0,
-                  1.0
-                ]),
+                colors: [Color(0xFF053B50), Color.fromARGB(255, 71, 81, 88)],
+                stops: [0.0, 1.0]),
             borderRadius: BorderRadius.circular(10)),
         child: ClipRRect(
           child: Column(
@@ -74,7 +69,7 @@ class MyskillsWidget extends StatelessWidget {
         width: 250.w,
         constraints: BoxConstraints(maxHeight: 200.dg, maxWidth: 150.w),
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.bottomLeft,
                 end: Alignment.bottomRight,
                 colors: [Colors.blueGrey, Colors.black26],
@@ -92,7 +87,7 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 2.w,
                     ),
-                    Container(
+                    SizedBox(
                       height: 30.dg,
                       width: 40.w,
                       child: ClipRRect(
@@ -204,7 +199,7 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 7.w,
                     ),
-                    Container(
+                    SizedBox(
                       width: 60.w,
                       height: 80.h,
                       child: SingleChildScrollView(
@@ -230,7 +225,7 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 2.w,
                     ),
-                    Container(
+                    SizedBox(
                       height: 30.dg,
                       width: 40.w,
                       child: ClipRRect(
@@ -256,7 +251,7 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 15.w,
                     ),
-                    Container(
+                    SizedBox(
                       width: 60.w,
                       height: 80.h,
                       child: SingleChildScrollView(
@@ -311,7 +306,7 @@ class MyskillsWidget extends StatelessWidget {
                     SizedBox(
                       width: 10.w,
                     ),
-                    Container(
+                    SizedBox(
                       width: 60.w,
                       height: 80.h,
                       child: SingleChildScrollView(

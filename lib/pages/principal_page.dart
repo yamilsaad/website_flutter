@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../components/component.dart';
-import '../layouts/layout.dart';
 import '../widgets/widget.dart';
 
 class PrincipalPage extends StatelessWidget {
@@ -14,22 +13,27 @@ class PrincipalPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      SizedBox(
-        height: 1000,
-        child: Image.asset(
-          'assets/img/soyDevchica.png',
-          fit: BoxFit.contain,
+    final currentWithPrincipal = MediaQuery.of(context).size.width;
+    final currentHeithPrincipal = MediaQuery.of(context).size.height;
+
+    return SizedBox(
+      height: currentHeithPrincipal,
+      width: currentWithPrincipal,
+      child: Stack(children: [
+        SizedBox(
+          height: currentHeithPrincipal,
+          width: currentWithPrincipal,
+          child: Image.asset(
+            'assets/img/soyDevchica.png',
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      const PhotoPrincipalWidget(),
-      SizedBox(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Stack(children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
+        const PhotoPrincipalWidget(),
+        SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Stack(children: [
+            Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 5.0).dg,
@@ -116,23 +120,20 @@ class PrincipalPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 50.h,
-                ),
               ],
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [MyskillsWidget()],
-              ),
-            ],
-          )
-        ]),
-      ),
-    ]);
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [MyskillsWidget()],
+                ),
+              ],
+            )
+          ]),
+        ),
+      ]),
+    );
   }
 }

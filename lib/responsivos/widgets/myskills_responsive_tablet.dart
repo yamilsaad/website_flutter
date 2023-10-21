@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flip_card/flip_card.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyskillsResponsiveTablet extends StatelessWidget {
@@ -10,6 +11,7 @@ class MyskillsResponsiveTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     const colorizeColors2 = [
       Color.fromRGBO(255, 255, 255, 1),
       Colors.grey,
@@ -21,20 +23,14 @@ class MyskillsResponsiveTablet extends StatelessWidget {
       direction: FlipDirection.HORIZONTAL,
       side: CardSide.FRONT,
       front: Container(
-        height: 60,
-        width: 400,
+        height: 85.h,
+        width: 190.w,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.bottomLeft,
                 end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFF053B50),
-                  const Color.fromARGB(255, 71, 81, 88)
-                ],
-                stops: [
-                  0.0,
-                  1.0
-                ]),
+                colors: [Color(0xFF053B50), Color.fromARGB(255, 71, 81, 88)],
+                stops: [0.0, 1.0]),
             borderRadius: BorderRadius.circular(10)),
         child: ClipRRect(
           child: Column(
@@ -44,8 +40,8 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(
-                        left: 2.0,
-                      ),
+                        left: 1.0,
+                      ).dg,
                       child: Row(
                         children: [
                           Padding(
@@ -54,16 +50,16 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                               'Hello World, I am Yamil!',
                               style: GoogleFonts.dancingScript(
                                 color: Colors.white,
-                                fontSize: 30,
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
                           ),
-                          SizedBox(width: 4),
+                          SizedBox(width: 2.w),
                           Icon(
                             Icons.emoji_objects_outlined,
                             color: Colors.white,
-                            size: 50,
+                            size: 20.dm,
                           )
                         ],
                       ),
@@ -76,10 +72,10 @@ class MyskillsResponsiveTablet extends StatelessWidget {
         ),
       ),
       back: Container(
-        height: 400,
-        width: 500,
+        height: 400.h,
+        width: 260.w,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.bottomLeft,
                 end: Alignment.bottomRight,
                 colors: [Colors.blueGrey, Colors.black26],
@@ -95,13 +91,13 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 15,
+                      width: 5.w,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: 60,
-                        width: 80,
+                        height: 70.h,
+                        width: 50.w,
                         child: ClipRRect(
                           child: Padding(
                             padding: const EdgeInsets.all(2.0),
@@ -114,11 +110,11 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 25,
+                      width: 10.w,
                     ),
                     SizedBox(
-                      width: 350,
-                      height: 110,
+                      width: 180.w,
+                      height: 130.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(
@@ -127,7 +123,7 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                             'Dart (originally called Dash) is an open source programming language, developed by Google.',
                             style: GoogleFonts.robotoCondensed(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -136,20 +132,20 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   height: 1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 15,
+                      width: 4.w,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: 60,
-                        width: 80,
+                        height: 70.h,
+                        width: 50.w,
                         child: ClipRRect(
                           child: Image.asset(
                             'assets/img/flutter.png',
@@ -159,11 +155,11 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 25,
+                      width: 10.w,
                     ),
                     SizedBox(
-                      width: 350,
-                      height: 200,
+                      width: 180.w,
+                      height: 130.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(
@@ -172,7 +168,7 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                             "Flutter is an extraordinary technology. Its multiplatform quality allows you to create beautiful projects, from a spectacular Mobile App to a Web page like the one you are seeing! Let's create something wonderful together!",
                             style: GoogleFonts.robotoCondensed(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -181,20 +177,20 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   height: 1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 20,
+                      width: 5.w,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: 60,
-                        width: 80,
+                        height: 70.h,
+                        width: 50.w,
                         child: ClipRRect(
                           child: Image.asset(
                             'assets/img/firebase.png',
@@ -204,11 +200,11 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 10.w,
                     ),
-                    Container(
-                      width: 350,
-                      height: 200,
+                    SizedBox(
+                      width: 180.w,
+                      height: 130.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(
@@ -217,7 +213,7 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                             'Firebase is a platform acquired by Google located in the cloud, integrated with Google Cloud Platform, which uses a set of tools for the creation and synchronization of projects that will be provided with high quality, making possible the growth of the number of users and also giving results. to obtain greater monetization.',
                             style: GoogleFonts.robotoCondensed(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -226,20 +222,20 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   height: 1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 25,
+                      width: 5.w,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 60,
-                        width: 80,
+                      child: SizedBox(
+                        height: 70.h,
+                        width: 50.w,
                         child: ClipRRect(
                           child: Padding(
                             padding: const EdgeInsets.all(2.0),
@@ -252,11 +248,11 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 10.w,
                     ),
-                    Container(
-                      width: 350,
-                      height: 200,
+                    SizedBox(
+                      width: 180.w,
+                      height: 130.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(
@@ -265,7 +261,7 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                             'A cubit state handler is a type of state handler used to manage the state of a Flutter application. Cubits are a simplified version of pads, offering an easier way to manage the state of an application.',
                             style: GoogleFonts.robotoCondensed(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -274,20 +270,20 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   height: 1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 25,
+                      width: 5.w,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        height: 60,
-                        width: 80,
+                        height: 70.h,
+                        width: 50.w,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10)),
                         child: ClipRRect(
@@ -300,11 +296,11 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 25,
+                      width: 10.w,
                     ),
-                    Container(
-                      width: 350,
-                      height: 135,
+                    SizedBox(
+                      width: 180.w,
+                      height: 130.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(
@@ -313,7 +309,7 @@ class MyskillsResponsiveTablet extends StatelessWidget {
                             'Flame is a modular Flutter game engine that provides a complete set of out-of-the-box solutions for gaming. Take advantage of the powerful infrastructure provided by Flutter but simplify the code you need to build your projects.',
                             style: GoogleFonts.robotoCondensed(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),

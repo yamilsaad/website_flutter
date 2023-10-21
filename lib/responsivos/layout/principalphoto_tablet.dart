@@ -1,6 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PhotoPrincipalTablet extends StatefulWidget {
@@ -34,6 +33,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalTablet>
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     const _colorizeColors = [
       Colors.white,
       Color.fromARGB(255, 238, 141, 173),
@@ -41,6 +41,8 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalTablet>
       Colors.yellow,
       Colors.red,
     ];
+
+    final currentPhotoTabletHeigth = MediaQuery.of(context).size.height;
 
     return AnimatedBuilder(
       animation: _controller,
@@ -53,9 +55,9 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalTablet>
               Stack(
                 children: [
                   Container(
-                    height: 820,
+                    height: currentPhotoTabletHeigth,
                     width: 480,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: ClipRRect(
                       child: Image.asset(
                         'assets/img/fotomia_reducida.png',
@@ -71,7 +73,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalTablet>
                         child: SizedBox(
                           width: 130,
                           child: AnimatedTextKit(
-                            pause: Duration(milliseconds: 3000),
+                            pause: const Duration(milliseconds: 3000),
                             animatedTexts: [
                               ColorizeAnimatedText(
                                 'Welcome',
@@ -93,9 +95,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalTablet>
                               ),
                             ],
                             isRepeatingAnimation: false,
-                            onTap: () {
-                              print("Tap Event");
-                            },
+                            onTap: () {},
                           ),
                         ),
                       )

@@ -15,7 +15,8 @@ class CuboWidget extends StatelessWidget {
       height: 420.h,
       constraints: BoxConstraints(maxHeight: 120.dg),
       decoration: BoxDecoration(
-          color: Color(0xFF053B50), borderRadius: BorderRadius.circular(15)),
+          color: const Color(0xFF053B50),
+          borderRadius: BorderRadius.circular(15)),
       child: Padding(
         padding: const EdgeInsets.all(2.0).dg,
         child: GridView.count(
@@ -23,7 +24,7 @@ class CuboWidget extends StatelessWidget {
             crossAxisSpacing: 2.dg,
             childAspectRatio: 1.0.sign,
             crossAxisCount: 3,
-            children: [
+            children: const [
               AvatarLayout(),
               FlipLayoutUno(),
               FlipLayoutDos(),

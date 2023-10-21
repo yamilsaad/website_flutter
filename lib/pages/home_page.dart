@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
     // Activa el temporizador para mostrar la imagen de carga durante 2 segundos
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       setState(() {
         _isLoading = false; // Oculta la imagen de carga después de 2 segundos
       });
@@ -32,7 +32,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _launchURL(String url) async {
+    // ignore: deprecated_member_use
     if (await canLaunch(url)) {
+      // ignore: deprecated_member_use
       await launch(url);
     } else {
       throw 'Could not launch $url';
@@ -46,7 +48,9 @@ class _HomePageState extends State<HomePage> {
       query: 'subject=Reporta&body=Detalhe aqui qual bug voce encontrou: ',
     );
     String url = params.toString();
+    // ignore: deprecated_member_use
     if (await canLaunch(url)) {
+      // ignore: deprecated_member_use
       await launch(url);
     } else {
       debugPrint('Could not launch $url');
@@ -67,8 +71,8 @@ class _HomePageState extends State<HomePage> {
             )
           : MediaQuery(
               data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-              child: ResponsiveLayout(
-                desktopScaffold: const PrincipalPage(),
+              child: const ResponsiveLayout(
+                desktopScaffold: PrincipalPage(),
                 mobileScaffold: ResponsiveMobile(),
                 tabletScaffold: ResponsiveTablet(),
               ),
@@ -122,6 +126,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           PopupMenuItem(
+            value: 'Gmail',
             child: ListTile(
               hoverColor: const Color(0xFF053B50),
               onLongPress: () {},
@@ -137,7 +142,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            value: 'Gmail',
           ),
         ],
       ),

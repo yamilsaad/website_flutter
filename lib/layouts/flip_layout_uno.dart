@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FlipLayoutUno extends StatelessWidget {
   const FlipLayoutUno({
@@ -22,7 +21,7 @@ class FlipLayoutUno extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 2,
                   blurRadius: 5,
-                  offset: Offset(0, 3),
+                  offset: const Offset(0, 3),
                 )
               ]),
           child: ClipRRect(
@@ -32,7 +31,7 @@ class FlipLayoutUno extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           )),
-      back: Card(),
+      back: const Card(),
     );
   }
 }

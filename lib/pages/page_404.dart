@@ -5,16 +5,14 @@ class Page404 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Text(
-                'Error 404',
-                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-              ),
+            Text(
+              'Error 404',
+              style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
             ),
           ],
         ),

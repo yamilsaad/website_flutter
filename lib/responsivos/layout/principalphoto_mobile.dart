@@ -1,6 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PhotoPrincipalMobile extends StatefulWidget {
@@ -34,6 +33,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalMobile>
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     const _colorizeColors = [
       Colors.white,
       Color.fromARGB(255, 238, 141, 173),
@@ -41,6 +41,9 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalMobile>
       Colors.yellow,
       Colors.red,
     ];
+
+    final currentPhotoMobileHeidht = MediaQuery.of(context).size.height;
+    final currentPhotoMobileWidth = MediaQuery.of(context).size.width;
 
     return AnimatedBuilder(
       animation: _controller,
@@ -53,9 +56,9 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalMobile>
               Stack(
                 children: [
                   Container(
-                    height: 620,
-                    width: 320,
-                    decoration: BoxDecoration(),
+                    height: currentPhotoMobileHeidht,
+                    width: currentPhotoMobileWidth,
+                    decoration: const BoxDecoration(),
                     child: ClipRRect(
                       child: Image.asset(
                         'assets/img/fotomia_reducida.png',
@@ -71,7 +74,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalMobile>
                         child: SizedBox(
                           width: 130,
                           child: AnimatedTextKit(
-                            pause: Duration(milliseconds: 3000),
+                            pause: const Duration(milliseconds: 3000),
                             animatedTexts: [
                               ColorizeAnimatedText(
                                 'Welcome',
@@ -93,9 +96,7 @@ class _PhotoPrincipalWidgetState extends State<PhotoPrincipalMobile>
                               ),
                             ],
                             isRepeatingAnimation: false,
-                            onTap: () {
-                              print("Tap Event");
-                            },
+                            onTap: () {},
                           ),
                         ),
                       )
