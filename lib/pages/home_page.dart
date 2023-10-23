@@ -70,9 +70,11 @@ class _HomePageState extends State<HomePage> {
               ),
             )
           : MediaQuery(
-              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+              data: MediaQuery.of(context).copyWith(
+                textScaleFactor: 1.0,
+              ),
               child: const ResponsiveLayout(
-                desktopScaffold: PrincipalPage(),
+                desktopScaffold: ResponsiveDesktop(),
                 mobileScaffold: ResponsiveMobile(),
                 tabletScaffold: ResponsiveTablet(),
               ),

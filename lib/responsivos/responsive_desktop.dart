@@ -6,8 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../components/component.dart';
 import '../widgets/widget.dart';
 
-class PrincipalPage extends StatelessWidget {
-  const PrincipalPage({
+class ResponsiveDesktop extends StatelessWidget {
+  const ResponsiveDesktop({
     super.key,
   });
 

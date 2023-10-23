@@ -89,27 +89,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.0"
-  flip_carousel:
-    dependency: "direct main"
-    description:
-      name: flip_carousel
-      sha256: "088a59106cc73debd2a0b6d03194b668c84193da206470ce3ecef907f8d2a8ab"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.3"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_3d_ball:
-    dependency: "direct main"
-    description:
-      name: flutter_3d_ball
-      sha256: "0479e1dc99decbeb6e189d430bd0acf82f47830cec4cde3f31d6b1e0dabb616a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.2"
   flutter_lints:
     dependency: "direct dev"
     description:

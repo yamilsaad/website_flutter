@@ -44,7 +44,7 @@ class ResponsiveTablet extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 3, left: 15),
+                          padding: const EdgeInsets.only(top: 3, left: 15).dg,
                           child: FlipCard(
                             fill: Fill.fillFront,
                             direction: FlipDirection.VERTICAL,

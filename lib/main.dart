@@ -4,10 +4,15 @@ import 'package:routemaster/routemaster.dart';
 
 import 'pages/pages.dart';
 
-final routes = RouteMap(routes: {
-  '/': (_) => const CupertinoTabPage(child: HomePage(), paths: ['/home']),
-  '/home': (_) => const MaterialPage(child: MePage()),
-});
+//Rutas route_master. Se definen las rutas principales y luego se asignan las rutas.
+final routes = RouteMap(
+    onUnknownRoute: (path) {
+      return const MaterialPage(child: Page404());
+    },
+    routes: {
+      '/': (_) => const CupertinoTabPage(child: HomePage(), paths: ['/home']),
+      '/home': (_) => const MaterialPage(child: HomePage()),
+    });
 
 void main() => runApp(const MyApp());
 
@@ -34,5 +39,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//TODO: Ver el tema de las rutas y el 404!
